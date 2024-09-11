@@ -1,0 +1,58 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: initial;
+}
+
+.mestre {
+    color: gold;
+    
+}
+
+.button {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 1px 2px 5px #0e0b0b59;     
+    font-size: larger;  
+    background-color: teal;
+    color: white;
+}
+
+.button:focus {
+    outline: 2px solid currentColor;
+}
+        
+.button:hover {
+    color:#00ff2a;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    outline: 1px;;
+    
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+        
+.button:active {
+    color: rgb(255, 0, 242);
+}
+
+.button--dark {
+    /* font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 1px 2px 5px #0e0b0b59;     
+    font-size: larger;   */
+    background-color: #2e2e2e;
+    color: #b0eebb;
+}
+
+
+
+
