@@ -48,10 +48,10 @@
                 >
                     
                     <div class="grid__item1" >
-                        <button class="js-done list__buttonDone flex">✔</button>
+                        <button class="js-done list__buttonDone flex" >${task.done ? "✔" : ""}</button>
                     </div>
 
-                    <div class="grid__item2" ${task.done ? " style=\"text-decoration: line-through\"": ""}>
+                    <div class="grid__item2 ${task.done ? "grid__item2--taskDone" : ""}">
                          ${task.content}
                     </div>
 
@@ -72,13 +72,15 @@
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        const newTaskContent = document.querySelector(".js-newTask").value.trim();
+        const newTaskElement = document.querySelector(".js-newTask");
+        const newTaskContent = newTaskElement.value.trim();
 
-        if (newTaskContent === "") {
-            return;
+        if (newTaskContent !== "") {
+            addNewTask(newTaskContent);
+            newTaskElement.value = "";
         }
 
-        addNewTask(newTaskContent);                 
+        newTaskElement.focus();                 
     };
 
     const init = () => {
