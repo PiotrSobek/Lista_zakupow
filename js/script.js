@@ -1,14 +1,6 @@
 {
     const tasks = [
-        {
-            content: "banany",
-            done: false,
-        },
-        {
-            content: "ziemniaki",
-            done: true,
-        },
-    ];
+    ]
 
     const addNewTask = (newTaskContent) => {
         tasks.push({
@@ -51,12 +43,23 @@
 
         for (const task of tasks) {
             htmlString += `
-                <li
-                    ${task.done ? " style=\"text-decoration: line-through\"": ""}
+                <li class="list_singleTask grid"
+                    
                 >
-                    <button class="js-done">zrobione?</buton>
-                    <button class="js-remove">usuń</button>
-                    ${task.content}
+                    
+                    <div class="grid__item1" >
+                        <button class="js-done list__buttonDone flex">✔</button>
+                    </div>
+
+                    <div class="grid__item2" ${task.done ? " style=\"text-decoration: line-through\"": ""}>
+                         ${task.content}
+                    </div>
+
+                    <div class="grid__item3">
+                        <button class="js-remove list__buttonDelete flex">🗑</button>
+                    </div>
+
+                    
                 </li>
             `;
         }
