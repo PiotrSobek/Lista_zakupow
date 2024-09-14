@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <title>Lista zakupów</title>
     <meta charset="UTF-8">
@@ -11,27 +12,42 @@
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/flex.css" rel="stylesheet">
     <link href="css/body.css" rel="stylesheet">
     <link href="css/header.css" rel="stylesheet">
-    <link href="css/article.css" rel="stylesheet">
-    <link href="css/navigation.css" rel="stylesheet">
-    <link href="css/aside.css" rel="stylesheet">
-    <link href="css/footer.css" rel="stylesheet">
-
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/list.css" rel="stylesheet">
     <script defer src="js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Sans+Narrow:wght@400;700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <form class="js-form">
-        <input class="js-newTask">
-        <button> Dodaj zadanie</button>
-    </form>
-    
-    <ul class="js-tasks"> </ul>
+<body class="body">
+    <main class="container">
+        <h1 class="header">Lista zadań</h1>
+        <div class="form">
+            <div class="form__title">
+                <h2>Dodaj nowe zadanie</h2>
+            </div>
+            <form class="js-form form__input">
+                <input class="js-newTask form__inputField" placeholder="Co jest do zrobienia?" autofocus>
+                <button class="form__button"> Dodaj zadanie</button>
+            </form>
+        </div>
+        <div class="list">
+            <div class="list__title">
+                <h2>Lista zadań</h2>
+            </div>
+            <ul class="js-tasks list__tasks"></ul>
+        </div>
+    </main>    
 </body>
+ 
 </html>
+ 
